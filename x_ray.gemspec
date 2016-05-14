@@ -18,5 +18,6 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split("\n")
 
   s.add_dependency 'rails', '~> 4.0'
+  s.add_dependency 'highlight'
   s.add_development_dependency 'sqlite3'
 end

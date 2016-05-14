@@ -1,3 +1,5 @@
+@import 'highlight';
+
 $x-ray-bg-color: #eceff1;
 $x-ray-border-color: darken($x-ray-bg-color, 30);
 $x-ray-border-radius: 3px;
@@ -29,7 +31,7 @@ $x-ray-border-radius: 3px;
   }
 
   .example {
-    padding: 20px;
+    padding: 15px;
   }
 
   .code-scan {
@@ -37,7 +39,7 @@ $x-ray-border-radius: 3px;
     border-top: 1px solid $x-ray-border-color;
     border-bottom-left-radius: $x-ray-border-radius;
     border-bottom-right-radius: $x-ray-border-radius;
-    padding: 20px;
+    padding: 15px 15px 0px 15px;
     overflow-x: auto;
   }
 }

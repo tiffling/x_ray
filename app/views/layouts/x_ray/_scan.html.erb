@@ -4,13 +4,8 @@
   </div>
 
   <div class="code-scan">
-    <% text = <<-HTML.strip_heredoc
-        #{yield}
-      HTML
-    %>
-
     <pre>
-      <%= text.gsub(/\s*$/, '') %>
+<%= x_ray_scan { yield } %>
     </pre>
   </div>
 </div>
