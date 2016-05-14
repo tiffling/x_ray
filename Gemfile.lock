@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    x_ray (0.0.2)
+    x_ray (0.0.4)
       highlight
       rails (~> 4.0)
 
