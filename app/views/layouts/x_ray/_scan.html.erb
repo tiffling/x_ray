@@ -1,11 +1,16 @@
-<div class="codeExample">
-  <div class="exampleOutput">
+<div class="x-ray-block">
+  <div class="example">
     <%= yield %>
   </div>
 
-  <div class="codeBlock">
+  <div class="code-scan">
+    <% text = <<-HTML.strip_heredoc
+        #{yield}
+      HTML
+    %>
+
     <pre>
-      <%= "#{yield}" %>
+      <%= text.gsub(/\s*$/, '') %>
     </pre>
   </div>
 </div>

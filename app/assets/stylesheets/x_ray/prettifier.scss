@@ -2,7 +2,7 @@ $x-ray-bg-color: #eceff1;
 $x-ray-border-color: darken($x-ray-bg-color, 30);
 $x-ray-border-radius: 3px;
 
-.codeExample {
+.x-ray-block {
   border: 1px solid $x-ray-border-color;
   border-radius: $x-ray-border-radius;
   margin-bottom: 30px;
@@ -27,16 +27,17 @@ $x-ray-border-radius: 3px;
   pre {
     margin: 0;
   }
-}
 
-.exampleOutput {
-  padding: 20px;
-}
+  .example {
+    padding: 20px;
+  }
 
-.codeBlock {
-  background-color: $x-ray-bg-color;
-  border-top: 1px solid $x-ray-border-color;
-  border-bottom-left-radius: $x-ray-border-radius;
-  border-bottom-right-radius: $x-ray-border-radius;
-  padding: 20px;
+  .code-scan {
+    background-color: $x-ray-bg-color;
+    border-top: 1px solid $x-ray-border-color;
+    border-bottom-left-radius: $x-ray-border-radius;
+    border-bottom-right-radius: $x-ray-border-radius;
+    padding: 20px;
+    overflow-x: auto;
+  }
 }
