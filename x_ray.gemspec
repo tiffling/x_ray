@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ['Tiffany Huang']
   s.email       = 'tiffanylinghuang@gmail.com'
   s.homepage    = 'https://github.com/tiffling/x-ray'
-  s.summary     = 'TODO: Summary of XRay.'
-  s.description = 'TODO: Description of XRay.'
+  s.summary     = 'A gem to help display code examples'
+  s.description = 'A gem to help display code examples'
   s.license     = 'MIT'
 
   s.files       = `git ls-files`.split("\n")
