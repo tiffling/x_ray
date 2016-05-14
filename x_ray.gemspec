@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.date        = '2016-05-13'
   s.authors     = ['Tiffany Huang']
   s.email       = 'tiffanylinghuang@gmail.com'
-  s.homepage    = 'https://github.com/tiffling/x-ray'
+  s.homepage    = 'https://github.com/tiffling/x_ray'
   s.summary     = 'A gem to help display code examples'
   s.description = 'A gem to help display code examples'
   s.license     = 'MIT'
