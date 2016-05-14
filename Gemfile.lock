@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    x_ray (0.0.1)
-      rails (~> 4.2.6)
+    x-ray (0.0.1)
+      rails (~> 4.0)
 
 GEM
   remote: https://rubygems.org/
@@ -107,4 +107,4 @@ PLATFORMS
 
 DEPENDENCIES
   sqlite3
-  x_ray!
+  x-ray!
