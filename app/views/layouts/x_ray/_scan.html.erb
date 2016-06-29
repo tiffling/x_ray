@@ -5,7 +5,9 @@
 
   <div class="code-scan">
     <pre>
+    <% cache(yield) do %>
 <%= x_ray_scan { yield } %>
+    <% end %>
     </pre>
   </div>
 </div>
