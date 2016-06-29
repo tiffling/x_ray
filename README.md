@@ -38,11 +38,15 @@ Works with plain html and embedded helper methods
 <% end %>
 
 <%= x_ray do %>
-  <%= submit_tag 'Set Time Zone', class: 'button primary-button mobile-full-button' %>
+  <%= submit_tag 'Set Time Zone', class: 'button' %>
+<% end %>
+
+<%= x_ray do %>
+  &lt;%= submit_tag 'Set Time Zone', class: 'button' %&gt;
 <% end %>
 ```
 
-<img src="http://i.imgur.com/jdxzuRw.png">
+<img src="http://i.imgur.com/2wtvxkT.png">
 
 ### Customization
 

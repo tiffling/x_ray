@@ -4,10 +4,11 @@ module XRay
       render(layout: 'layouts/x_ray/scan', &block)
     end
 
-    def x_ray_scan(&block)
+    def x_ray_scan
       text = <<-HTML.strip_heredoc
-        #{Simplabs::Highlight.highlight(:erb, yield)}
+        #{Simplabs::Highlight.highlight(:erb, yield.gsub('&lt;', '<').gsub('&gt;', '>'))}
       HTML
+
       sanitize(text.strip).html_safe
     end
   end
