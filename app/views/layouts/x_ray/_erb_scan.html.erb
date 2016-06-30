@@ -1,0 +1,11 @@
+<div class="x-ray-block">
+  <div class="example">
+    <%= ERB.new(yield.gsub('&lt;', '<').gsub('&gt;', '>')).result(binding).html_safe %>
+  </div>
+
+  <div class="code-scan">
+    <pre>
+<%= x_ray_scan(yield.gsub('&lt;', '<').gsub('&gt;', '>')) %>
+    </pre>
+  </div>
+</div>

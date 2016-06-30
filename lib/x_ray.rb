@@ -1,5 +1,3 @@
-require 'simplabs/highlight'
-
 module XRay
   class << self
     attr_accessor :configuration

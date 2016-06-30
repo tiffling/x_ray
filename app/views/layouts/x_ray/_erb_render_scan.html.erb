@@ -1,0 +1,12 @@
+<div class="x-ray-block">
+  <div class="example">
+    <%= render(context, options, &block) %>
+  </div>
+
+  <div class="code-scan">
+    <pre>
+      <div hidden><% raw_block = block.try(:call) %></div>
+<%= x_ray_erb_render_code(context, options, raw_block) %>
+    </pre>
+  </div>
+</div>

@@ -1,13 +1,11 @@
 <div class="x-ray-block">
   <div class="example">
-    <%= ERB.new(yield.gsub('&lt;', '<').gsub('&gt;', '>')).result(binding).html_safe %>
+    <%= yield %>
   </div>
 
   <div class="code-scan">
     <pre>
-    <% cache(yield) do %>
-<%= x_ray_scan { yield } %>
-    <% end %>
+<%= x_ray_scan(yield) %>
     </pre>
   </div>
 </div>
