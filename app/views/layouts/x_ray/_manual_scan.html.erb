@@ -1,6 +1,6 @@
 <div class="x-ray-block">
   <div class="example">
-    <%= ERB.new(code).result(binding).html_safe %>
+    <%= example_block.call %>
   </div>
 
   <div class="code-scan">

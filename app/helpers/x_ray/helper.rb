@@ -4,25 +4,20 @@ module XRay
       render(layout: 'layouts/x_ray/scan', &block)
     end
 
-    def x_ray_erb(&block)
-      render(layout: 'layouts/x_ray/erb_scan', &block)
+    def x_ray_erb(code)
+      render(partial: 'layouts/x_ray/erb_scan', locals: { code: code })
     end
 
-    def x_ray_erb_render(context, options={}, &block)
-      render(partial: 'layouts/x_ray/erb_render_scan', locals: { context: context, options: options, block: block})
+    def x_ray_erb_insert_with_block(method, *params, &block)
+      example = send(method, *params, &block)
+      render(partial: 'layouts/x_ray/erb_insert_with_block_scan', locals: { example: example,method: method, params: params, block: block })
     end
 
-    def x_ray_erb_render_code(context, options, raw_block)
-      code = if raw_block
-        "<%= render #{context}, #{options} do %>\n#{x_ray_scan(raw_block)}\n<% end %>"
-      else
-        "<%= render #{context}, #{options} %>"
-      end
-
-      x_ray_scan(code)
+    def x_ray_manual(code, &example_block)
+      render(partial: 'layouts/x_ray/manual_scan', locals: { example_block: example_block, code: code })
     end
 
-    def x_ray_scan(code)
+    def x_ray_output_code(code)
       text = <<-HTML.strip_heredoc
         #{code}
       HTML
